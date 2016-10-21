@@ -1,6 +1,6 @@
-#Due: *Thursday, Nov. 3.*
+Due: Thursday, Nov. 3.
 
-*****
+=============
 
 #1.4
 	What arguments can you make against the idea of a single language for all 
