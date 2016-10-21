@@ -1,4 +1,4 @@
-*Due: Thursday, Nov. 3.*
+#Due: Thursday, Nov. 3.#
 ***
 
 #1.4
