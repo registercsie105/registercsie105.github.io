@@ -8,7 +8,7 @@
 	Many contemporary languages allow two kinds of comments: one in which 
 	delimiters are used on both ends(multiple-line comments),and one in which a 
 	delimiter marks only the beginning of the comment(one-line comments). 
-	Discuss the advantages and disadvantages of each of these with repect to our 
+	Discuss the advantages and disadvantages of each of these with respect to our 
 	criteria.
 
 #2.14
