@@ -15,7 +15,7 @@
 	What are the arguments both for and against the idea of typeless language?
 
 #Example 3.4
-	![Example 3.4](http://imgur.com/rx5MPkW.jpg)
+![Example 3.4](http://imgur.com/rx5MPkW.jpg)
 
 
 #3.4
