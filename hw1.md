@@ -14,6 +14,9 @@
 #2.14
 	What are the arguments both for and against the idea of typeless language?
 
+#Example 3.4 
+	<http://imgur.com/rx5MPkW>
+
 #3.4
 	Rewrite the BNF of Example 3.4 to add the ++ and -- unary operators of Java.
 
