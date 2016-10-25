@@ -1,4 +1,4 @@
-![Example 3.4]<http://imgur.com/rx5MPkW.jpg>
+![Example 3.4](http://imgur.com/rx5MPkW.jpg)
 
 > Due: Thursday, Nov. 3.
 
