@@ -1,0 +1,154 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  background-image: url("../img/space.png");
+  background-size: cover;
+  background-position: center;
+}
+
+body * {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.container {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#board {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#board > img {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#clickhere {
+  font-family: "Sumana";
+  font-size: 3vmin;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 5vmin;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  position: absolute;
+  z-index: 13;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 23%;
+  max-width: 90vmin;
+  width: 100%;
+  height: 20vh;
+  background-color: rgba(0,0,0,0.1);
+  pointer-events: none;
+  animation: fadein 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadein {
+  0% {opacity: 0;}
+  70% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.patches {
+  display: block;
+  position: fixed;
+  z-index: 12;
+  transform: translateX(-50%) translateY(-50%);
+  height: 18vh;
+  left: 120%;
+  top: 75%;
+  pointer-events: none;
+}
+
+.patches > img {
+  height: 100%;
+  width: auto;
+}
+
+.explosion {
+  display: block;
+  position: fixed;
+  z-index: 12;
+  transform: translateX(-50%) translateY(-50%);
+  height: 18vh;
+  left: 51%;
+  top: 17%;
+  pointer-events: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#countdown, .message {
+  font-family: "Sumana";
+  font-weight: 700;
+  text-shadow: -7px 6px 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 11;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 30%;
+  font-size: 9vmin;
+  color: white;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.message {
+  font-size: 3vmin;
+}
+
+.backdrop {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.backdrop img {
+  position: absolute;
+  max-height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+.backdrop img:nth-child(1) {
+  left: 0;
+}
+
+.backdrop img:nth-child(2) {
+  right: 0;
+}
