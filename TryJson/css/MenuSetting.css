@@ -1,0 +1,37 @@
+body
+{
+    padding-top: 50px;
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+}
+
+.bg-1
+{
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+
+.row
+{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+
+#Source , #Edited
+{
+	width: 320px;
+	height: 568px;
+}
+
+.readme
+{
+	text-align: left;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.swal2-modal 
+{
+    margin: auto;
+}
