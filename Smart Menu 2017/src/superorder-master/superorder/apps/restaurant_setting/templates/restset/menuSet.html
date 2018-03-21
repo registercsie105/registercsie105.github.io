@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}SmartMenu - Menu Setting{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'restset_css/style.css' %}">
+<link rel="stylesheet" href="{% static 'restset_css/menuSet.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.css">
+{% endblock %}
+
+{% block bodyAttr %}class="bg-1" data-spy="scroll" data-target=".navbar"{% endblock %}
+{% block content %}
+{% include "restset/includes/navbar.html" %}
+<div class="container">
+{% include "includes/messages.html" %}
+</div>
+
+
+    <!-- 個人檔案設定 -->
+    <div class="row" id="MenuSetting">
+{% include "restset/includes/stackNav.html" %}
+
+        <!-- Menu Setting -->
+        <div class="col-xs-9">
+            <div class="col-xs-5 text-right">
+                <button class="btn btn-warning btn-lg" onclick="SetValue();">預覽</button>
+                <br>
+                <br>
+                <iframe src="{% url 'output' %}" id="Source"></iframe>
+                </iframe>
+            </div>
+            <div class="col-xs-2">
+                <center>
+                    <button class="btn btn-info btn-lg" onclick="readme();">操作說明</button>
+                </center>
+            </div>
+            <div class="col-xs-5 text-left">
+                <button class="btn btn-success btn-lg" onclick="SaveValue();">儲存</button>
+                <br>
+                <br>
+                <iframe src="{% url 'output' %}" id="Edited"></iframe>
+                </iframe>
+            </div>
+        </div>
+    </div>
+{% csrf_token %}
+{% endblock %}
+
+{% block javascript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="{% static 'restset_js/menuSet.js' %}"></script>
+<script src="{% static 'restset_js/menuCommon.js' %}"></script>
+{% endblock %}

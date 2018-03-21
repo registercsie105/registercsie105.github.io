@@ -1,0 +1,300 @@
+.jumbotron
+{
+    background-color: #123456;
+    color: #fff;
+    /* 上 右 下 左;*/
+    padding: 75px 25px 25px 25px;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0px;
+}
+
+.container-fluid
+{
+    padding-top: 50px;
+}
+
+.navbar
+{
+    margin-bottom: 0;
+    /*background-color: #f4511e;*/
+    z-index: 999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+.navbar li a, .navbar .navbar-brand
+{
+    color: #fff !important;
+}
+
+.navbar-nav li.active a
+{
+    background-color: #222222 !important;
+}
+
+.navbar-nav li a:hover
+{
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-inverse .navbar-toggle
+{
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.Stories
+{
+    width: 75px;
+    height: 75px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+.shoppingcart
+{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.col-xs-4
+{
+    padding:5px 5px 5px 5px;
+}
+
+.color-info
+{
+    background-color: #5bc0de;
+}
+
+.color-warning
+{
+    background-color: #f0ad4e;
+}
+
+.color-danger
+{
+    background-color: #d9534f;
+}
+
+.color-success
+{
+    background-color: #5cb85c;
+}
+
+.star
+{
+    margin-top: 5px;
+    font-size: 30px;
+    color: #ffdf01;
+    text-shadow: 1px 1px 1px #f8b63d;
+    vertical-align: text-bottom;
+}
+
+.showstar
+{
+    padding-left: 5px;
+    font-size: 25px;
+    color: #ffdf01;
+    text-shadow: 1px 1px 1px #f8b63d;
+    vertical-align: text-bottom;
+}
+
+.HotFoodTitle
+{
+    margin-bottom: 15px;
+}
+
+.HotFoodFont
+{
+    text-shadow: 0px 0px 15px #f8b63d;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFF22;
+    letter-spacing:5px;
+}
+
+.alignleft
+{
+    float: left;
+    text-align: left;
+    padding-top: 3px;
+}
+
+.alignmid
+{
+    float: right;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+
+.alignright
+{
+    float: right;
+    text-align: right;
+}
+
+.row
+{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.mypanel-heading
+{
+    color: rgb(49, 112, 143);
+    background-color: rgb(217, 237, 247);
+    border-color: rgb(188, 232, 241);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    overflow: auto;
+}
+
+.swal2-modal .swal2-styled
+{
+    padding: 10px 20px;
+}
+
+.swal2-modal .swal2-content
+{
+    font-size: 14px;
+}
+
+.swal2-modal
+{
+    margin: auto;
+}
+
+.myCorfirmButton , .myDeleteButton , .myCancelButton
+{
+    border: 0;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 15px 5px 0;
+    padding: 10px 20px;
+}
+
+.myCorfirmButton
+{
+    background-color: rgb(48, 133, 214);
+    border-left-color: rgb(48, 133, 214);
+    border-right-color: rgb(48, 133, 214);
+}
+
+.myDeleteButton
+{
+    background-color: #d9534f;
+    border-left-color: #d9534f;
+    border-right-color: #d9534f;
+}
+
+.myCancelButton
+{
+    background-color: #f0ad4e;
+    border-left-color: #f0ad4e;
+    border-right-color: #f0ad4e;
+}
+
+.myarticle
+{
+    text-align: justify;
+    overflow: scroll;
+    max-height: 50px;
+}
+
+.panel
+{
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+.panel-heading
+{
+    border-radius: 0px;
+}
+
+.col-xs-4.text-center
+{
+    padding: 0px;
+}
+
+.border-info
+{
+    border: 2px solid;
+    border-color: #bce8f1;
+    background-color: #d9edf7;
+}
+
+.border-warning
+{
+    border: 2px solid;
+    border-color: #faebcc;
+    background-color: #fcf8e3;
+}
+
+.border-danger
+{
+    border: 2px solid;
+    border-color: #ebccd1;
+    background-color: #f2dede;
+}
+
+.border-success
+{
+    border: 2px solid;
+    border-color: #d6e9c6;
+    background-color: #dff0d8;
+}
+
+.scrolltd
+{
+  border:1px solid;
+  max-width:1px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+
+.bell
+{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.glyphicon-bell
+{
+    color: yellow;
+}
+
+.btn-black
+{
+    color: yellow;
+    background-color: black;
+}
+
+.btn-black:active , .btn-black:hover ,
+.btn-black:focus , .btn-black:visited
+{
+    color: yellow;
+    background-color: #555555;
+}

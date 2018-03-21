@@ -1,0 +1,27 @@
+<div class="col-xs-3">
+    <ul class="nav nav-pills nav-stacked">
+        <li{% if page == "profile" %} class="active"{% endif %}>
+            <a href="{% url 'ProfileSetting' %}">
+                <i class="glyphicon glyphicon-user"></i> 餐廳老闆設定
+            </a>
+        </li>
+
+        <li{% if page == "staff" %} class="active"{% endif %}>
+            <a href="{% url 'StaffSetting' %}">
+                <i class="fa fa-child" style="font-size:18px"></i> 餐廳員工設定
+            </a>
+        </li>
+
+        <li{% if page == "company" %} class="active"{% endif %}>
+            <a href="{% url 'CompanySetting' %}">
+                <i class="glyphicon glyphicon-briefcase"></i> 公司頁面設定
+            </a>
+        </li>
+
+        <li{% if page == "menu" %} class="active"{% endif %}>
+            <a href="{% url 'MenuSetting' %}">
+                <i class="glyphicon glyphicon-book"></i> 菜單設定
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,13 @@
+{% if messages %}
+  {% for message in messages %}
+    <div id="messageAlert" class="alert alert-dismissible fade {% if message.tags %}{% if message.tags == 'error' %}alert-danger{% elif message.tags == 'debug' %}alert-warning{% else %}alert-{{ message.tags }}{% endif %}{% else %}alert-info{% endif %}" role="alert">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      {{ message }}
+    </div>
+  {% endfor %}
+  <script>
+    window.setTimeout(function () {
+      $("#messageAlert").fadeTo(3000,50).slideUp(500);
+    }, 0);
+  </script>
+{% endif %}

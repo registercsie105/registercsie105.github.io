@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% block title %}SmartMenu - Register{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'core_css/style.css' %}">
+<link rel="stylesheet" href="{% static 'auth_css/register.css' %}">
+{% endblock %}
+
+{% block bodyAttr %}class="bg-1" data-spy="scroll" data-target=".navbar"{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+<div class="container">
+    <br>
+    {% include "includes/messages.html" %}
+    <form class="form-inline" action="#">
+        <div class="form-group">
+        <label><h4>已經有帳號了？立即登入！</h4></label>
+            <a href="{% url 'login' %}" type="button" id="button" class="btn btn-success">登入</a>
+        </div>
+    </form>
+
+    <br>
+
+    <form class="form-horizontal form-set" method="post" action=".">
+        {% csrf_token %}
+        <h4>帳號資訊 : </h4>
+
+        <div class="input-group col-xs-offset-1 col-xs-10{% if form.username.errors %} has-error{% endif %}">
+            <span class="input-group-addon" id="basic-addon1">
+                <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input type="text" value="{{ form.username.value|default_if_none:'' }}"  name="{{ form.username.html_name }}"
+            class="form-control" placeholder="使用者名稱" aria-describedby="basic-addon1" autofocus>
+        </div>
+        {% for error in form.username.errors %}
+        <h6 class="text-danger col-xs-offset-1">* {{ error }}</h6>
+        {% endfor %}
+        <div class="input-group col-xs-offset-1 col-xs-10{% if form.password1.errors %} has-error{% endif %}">
+            <span class="input-group-addon" id="basic-addon1">
+                <i class="glyphicon glyphicon-lock"></i>
+            </span>
+            <input type="password" name="{{ form.password1.html_name }}"
+            class="form-control" placeholder="使用者密碼" aria-describedby="basic-addon1">
+        </div>
+        {% for error in form.password1.errors %}
+        <h6 class="text-danger col-xs-offset-1">* {{ error }}</h6>
+        {% endfor %}
+        <div class="input-group col-xs-offset-1 col-xs-10{% if form.password2.errors %} has-error{% endif %}">
+                <span class="input-group-addon" id="basic-addon1">
+                    <i class="glyphicon glyphicon-lock"></i>
+                </span>
+                <input type="password" name="{{ form.password2.html_name }}"
+                class="form-control" placeholder="密碼確認" aria-describedby="basic-addon1">
+        </div>
+        {% for error in form.password2.errors %}
+        <h6 class="text-danger col-xs-offset-1">* {{ error }}</h6>
+        {% endfor %}
+
+
+        <h4>餐廳資訊 : </h4>
+
+        <div class="input-group col-xs-offset-1 col-xs-10{% if rest_from.name.errors %} has-error{% endif %}">
+            <span class="input-group-addon" id="basic-addon1">
+                <i class="glyphicon glyphicon-cutlery"></i>
+            </span>
+            <input type="text" value="{{ rest_from.name.value|default_if_none:'' }}"  name="{{ rest_from.name.html_name }}"
+            class="form-control" placeholder="餐廳名字" aria-describedby="basic-addon1">
+        </div>
+        {% for error in rest_from.name.errors %}
+        <h6 class="text-danger col-xs-offset-1">* {{ error }}</h6>
+        {% endfor %}
+        <div class="input-group col-xs-offset-1 col-xs-10{% if rest_from.address.errors %} has-error{% endif %}">
+            <span class="input-group-addon" id="basic-addon1">
+                <i class="glyphicon glyphicon-home"></i>
+            </span>
+            <input type="text" value="{{ rest_from.address.value|default_if_none:'' }}"  name="{{ rest_from.address.html_name }}"
+            class="form-control" placeholder="餐廳地址" aria-describedby="basic-addon1">
+        </div>
+        {% for error in rest_from.address.errors %}
+        <h6 class="text-danger col-xs-offset-1">* {{ error }}</h6>
+        {% endfor %}
+        <div class="input-group col-xs-offset-1 col-xs-10{% if rest_from.phone.errors %} has-error{% endif %}">
+            <span class="input-group-addon" id="basic-addon1">
+                <i class="glyphicon glyphicon-phone-alt"></i>
+            </span>
+            <input type="text" value="{{ rest_from.phone.value|default_if_none:'' }}"  name="{{ rest_from.phone.html_name }}"
+            class="form-control" placeholder="餐廳電話" aria-describedby="basic-addon1">
+        </div>
+        {% for error in rest_from.phone.errors %}
+        <h6 class="text-danger col-xs-offset-1">* {{ error }}</h6>
+        {% endfor %}
+
+        <h4>申請人資訊 : </h4>
+
+        <div class="input-group col-xs-offset-1 col-xs-10{% if rest_from.applicant_name.errors %} has-error{% endif %}">
+            <span class="input-group-addon" id="basic-addon1">
+                <i class="glyphicon glyphicon-tag"></i>
+            </span>
+            <input type="text" value="{{ rest_from.applicant_name.value|default_if_none:'' }}"  name="{{ rest_from.applicant_name.html_name }}"
+            class="form-control" placeholder="申請人姓名" aria-describedby="basic-addon1">
+        </div>
+        {% for error in rest_from.applicant_name.errors %}
+        <h6 class="text-danger col-xs-offset-1">* {{ error }}</h6>
+        {% endfor %}
+
+        <div class="input-group col-xs-offset-1 col-xs-10{% if rest_from.applicant_phone.errors %} has-error{% endif %}">
+            <span class="input-group-addon" id="basic-addon1">
+                <i class="glyphicon glyphicon-phone"></i>
+            </span>
+            <input type="text" value="{{ rest_from.applicant_phone.value|default_if_none:'' }}"  name="{{ rest_from.applicant_phone.html_name }}"
+            class="form-control" placeholder="申請人電話" aria-describedby="basic-addon1">
+        </div>
+        {% for error in rest_from.applicant_phone.errors %}
+        <h6 class="text-danger col-xs-offset-1">* {{ error }}</h6>
+        {% endfor %}
+
+        <div class="input-group col-xs-offset-1 col-xs-10{% if rest_from.applicant_email.errors %} has-error{% endif %}">
+            <span class="input-group-addon" id="basic-addon1">
+                <i class="glyphicon glyphicon-envelope"></i>
+            </span>
+            <input type="text" value="{{ rest_from.applicant_email.value|default_if_none:'' }}"  name="{{ rest_from.applicant_email.html_name }}"
+            class="form-control" placeholder="申請人電子郵件" aria-describedby="basic-addon1">
+        </div>
+        {% for error in rest_from.applicant_email.errors %}
+        <h6 class="text-danger col-xs-offset-1">* {{ error }}</h6>
+        {% endfor %}
+
+        <br><br>
+        <div class="input-group col-sm-offset-1 col-xs-offset-1 col-sm-3 col-xs-3">
+            <button class="btn btn-primary btn-lg btn-block login-button" type="submit">註冊</button>
+        </div>
+        <br>
+    </form>
+</div>
+
+<br><br><br>
+
+{% endblock %}

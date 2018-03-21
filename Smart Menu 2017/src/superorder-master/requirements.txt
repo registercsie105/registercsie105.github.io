@@ -1,0 +1,4 @@
+Django==1.10.6
+Unipath==1.1
+Pillow==4.3.0
+requests==2.18.4

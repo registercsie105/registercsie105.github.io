@@ -1,0 +1,25 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block meta %}{% endblock %}
+  
+  <!-- link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- custom file -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block stylesheet %}
+  {% endblock %}
+
+</head>
+<body {% block bodyAttr %}{% endblock %}>
+  {% block content %}{% endblock %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  {% block javascript %}{% endblock %}
+</body>
+</html>

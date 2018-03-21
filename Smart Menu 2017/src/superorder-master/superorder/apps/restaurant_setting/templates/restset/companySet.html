@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block title %}SmartMenu - Company Setting{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'restset_css/style.css' %}">
+<link rel="stylesheet" href="{% static 'restset_css/companySet.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block bodyAttr %}class="bg-1" data-spy="scroll" data-target=".navbar"{% endblock %}
+{% block content %}
+{% include "restset/includes/navbar.html" %}
+<div class="container">
+{% include "includes/messages.html" %}
+</div>
+
+
+    <!-- 個人檔案設定 -->
+    <div class="row" id="CompanySetting">
+        {% include "restset/includes/stackNav.html" %}
+
+        <!-- Company Setting -->
+        <div class="col-xs-9">
+            <form class="form-horizontal" method="post" action=".">
+                {% csrf_token %}
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-11 col-xs-9">
+                                <strong class="panel-title text-left">餐廳網址</strong>
+                            </div>
+                            <div class="col-md-1 col-xs-3">
+                                <button class="btn btn-success" type="submit" name="changeurl">更改</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-11">
+                                <font class="word">https://www.huuuuuding.com/r/ </font>
+                                <input type="text" name="url" value="{{ form.url.value|default_if_none:request.user.restaurant.url }}" placeholder="English name of company" class="form-control" maxlength="20" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-11">
+                                <p class="text-warning">
+                                    <strong>提示: </strong> 網址只能是 英文,數字,底線(_)或連字符(-)
+                                </p>
+                        {% for error in form.url.errors %}
+                        {% if  "存在" in error or "exist" in error %}
+                        <h6 class="text-danger">* 此網址已被使用，請換別的。</h6>
+                        {% endif %}
+                        {% endfor %}
+                            </div>
+                            <div class="col-xs-1">
+                                <a href="/r/{{request.user.restaurant.url}}" class="word" target="_blank">Go</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <form class="form-horizontal" method="post" action="." enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-10 col-xs-6">
+                                <strong class="panel-title text-left">公司封面照</strong>
+                            </div>
+
+                            <div class="col-md-1 col-xs-3">
+                                <div class="monkeyb-cust-file">
+                                    <span>選擇</span>
+                                    <input type="file" id="uploader" name="logo" onchange="readURL(this);">
+                                </div>
+                            </div>
+
+                            <div class="col-md-1 col-xs-3">
+                                <button class="btn btn-success" type="submit" name="uploadimg">上傳</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        {% if request.user.restaurant.logo %}
+                            <img id="img_prev" src="{{request.user.restaurant.logo.url}}" width="87%">
+                        {% else %}
+                            <img id="img_prev" src="/static/core_img/no-logo.jpg" width="87%">
+                        {% endif %}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'restset_js/companySet.js' %}"></script>
+{% endblock %}

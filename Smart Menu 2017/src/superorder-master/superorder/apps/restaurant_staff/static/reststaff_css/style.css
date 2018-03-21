@@ -1,0 +1,109 @@
+/* body */
+body
+{
+    background-color: #333;
+}
+
+/* navbar */
+.navbar
+{
+    margin-bottom: 0;
+    /*background-color: #f4511e;*/
+    z-index: 999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+.navbar li a, .navbar .navbar-brand
+{
+    color: #fff !important;
+}
+
+.navbar-nav li.active a
+{
+    background-color: #222222 !important;
+}
+
+.navbar-nav li a:hover
+{
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-inverse .navbar-toggle
+{
+    border-color: transparent;
+    color: #fff !important;
+}
+
+/* 第一個div要往下一點 因為有navbar擋路 */
+.firstdiv
+{
+    margin-top: 50px;
+}
+
+/* jumbotron */
+.jumbotron
+{
+    /* 上 右 下 左;*/
+    padding: 25px 25px 50px 25px;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 30px;
+}
+
+/* table */
+.table
+{
+    border: 2px solid;
+    margin-bottom: 50px;
+}
+
+.tabletitle
+{
+    margin-bottom: 10px;
+}
+
+.scrolltd
+{
+  max-width:1px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.servecount
+{
+    font-weight: bold;
+    color: brown;
+}
+
+.overcount
+{
+    font-weight: bold;
+    color: #666666;
+}
+
+.form-setting
+{
+    background-color: black;
+    font-size: 16px;
+    color: white;
+}
+
+/* btn-black for table num*/
+.btn-black
+{
+    color: white;
+    background-color: black;
+}
+
+.disableClick:active , .disableClick:hover ,
+.disableClick:focus , .disableClick:visited
+{
+    cursor: auto;
+    color: white;
+    background-color: black;
+}

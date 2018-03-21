@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}SmartMenu - OrderManage{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.css">
+<link rel="stylesheet" href="{% static 'reststaff_css/style.css' %}">
+<link rel="stylesheet" href="{% static 'reststaff_css/counter.css' %}">
+{% endblock %}
+
+{% block bodyAttr %}id="myPage" data-spy="scroll" data-target=".navbar" data-offset="20"{% endblock %}
+{% block content %}
+{% include "reststaff/includes/navbar.html" %}
+<div class="jumbotron firstdiv" id="QRcodeMaker">
+    {% include "includes/messages.html" %}
+    <h3 class="text-center">產生QR code</h3>
+    <br>
+
+    <form id="QRcodeMakerForm">
+        <div class="row">
+            <div class="col-xs-6 text-center">
+                <h4>人數</h4>
+                <input type="number" id="peopleNum" class="form-control" required="required">
+            </div>
+
+            <div class="col-xs-6 text-center">
+                <h4>桌號</h4>
+                <input type="number" id="tableNum" class="form-control" required="required">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-8 text-center">
+                <input type="submit" class="form-control btn btn-success" value="產生QR code">
+            </div>
+        </div>
+        <br>
+        <div class="row text-center">
+            <img id="QRcodeImg" width="150px">
+        </div>
+        <div class="row text-center">
+            <h3 id="orderURL"></h3>
+        </div>
+    </form>
+</div>
+
+
+<div class="jumbotron" id="mybuyList">
+    <h3 class="text-center">訂單列表</h3>
+    <br>
+</div>
+{% csrf_token %}
+{% endblock %}
+
+{% block javascript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script>
+    idFoodsJsonPath = "{{ idFoodsJsonPath }}";
+</script>
+<script src="{% static 'reststaff_js/counter.js' %}"></script>
+{% endblock %}

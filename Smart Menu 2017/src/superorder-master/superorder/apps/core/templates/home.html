@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}SmartMenu - Home{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="{% static 'core_css/style.css' %}">
+<link rel="stylesheet" href="{% static 'core_css/home.css' %}">
+{% endblock %}
+
+{% block bodyAttr %}data-spy="scroll" data-target=".navbar"{% endblock %}
+{% block content %}
+{% include "navbar.html" %}
+
+<div id="home" class="bg-1 text-center">
+    <br><br>
+    <h3>餐廳都必須擁有的SOP</h3>
+    <p><em>除了提供餐廳自製餐單 ...<br>點餐、確認點餐、加點、結帳也一手包辦！</em></p>
+    <br><br>
+</div>
+
+<div id="partner" class="container">
+    {% include "includes/messages.html" %}
+    <div class="text-center">
+        <h3>已經有數家餐廳與我們合作</h3>
+        <p><em>我們也誠摯歡迎您的加入！</em></p>
+    </div>
+    <br><br>
+    <div id="partner_list">
+    </div>
+
+</div>
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="bg-1">
+    <br>
+    <h3 class="text-center">聯繫我們</h3>
+    <p class="text-center"><em>立即加入我們，註冊或登入！</em></p>
+
+    <div class="row">
+
+        <div class="col-sm-4 col-xs-4"></div>
+        <div class="col-sm-2 col-xs-2 text-center">
+            <button type="button" class="btn btn-warning" onclick="location.href='{% url 'register' %}'">註冊</button>
+        </div>
+        <div class="col-sm-2 col-xs-2 text-center">
+            <button type="button" class="btn btn-primary" onclick="location.href='{% url 'login' %}'">登入</button>
+        </div>
+        <div class="col-sm-4 col-xs-4"></div>
+
+        <br>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+    <a class="up-arrow" href="#home" data-toggle="tooltip" >
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <br>
+    <p> Made By <a href="#" data-toggle="tooltip">our.website.com</a></p>
+</footer>
+{% endblock %}
+
+{% block javascript %}
+<!-- wow.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="{% static 'core_js/home.js' %}"></script>
+
+{% endblock %}

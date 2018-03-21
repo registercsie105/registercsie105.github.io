@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}SmartMenu - Login{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'core_css/style.css' %}">
+<link rel="stylesheet" href="{% static 'auth_css/login.css' %}">
+{% endblock %}
+
+{% block bodyAttr %}class="bg-1" data-spy="scroll" data-target=".navbar"{% endblock %}
+{% block content %}
+{% include "navbar.html" %}
+<div class="container">
+    <br>
+    {% include "includes/messages.html" %}
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 class="text-center login-title">登入到餐廳介面 (餐廳老闆)</h1>
+            <div class="account-wall">
+                <img class="profile-img" src="https://imgur.com/eDvtbaX.png" alt="">
+                <form class="form-signin" method="post" action=".">
+                {% csrf_token %}
+                <input type="text" name="username" value="{{ username }}" class="form-control" placeholder="使用者名稱" required autofocus>
+                <input type="password" name="password" class="form-control" placeholder="使用者密碼" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">登入</button>
+                <input type="hidden" name="next" value="{{ next }}" />
+                </form>
+            </div>
+            <a href="{% url 'staffLogin' %}" class="text-center anotherlogin">員工請按此登入！ </a>
+            <a href="{% url 'register' %}" class="text-center new-account">沒有帳戶嗎？立即創建！ </a>
+        </div>
+    </div>
+
+
+
+{% endblock %}

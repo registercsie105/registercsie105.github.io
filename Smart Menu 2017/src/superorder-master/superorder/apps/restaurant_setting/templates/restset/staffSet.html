@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}SmartMenu - Staff Setting{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'restset_css/style.css' %}">
+<link rel="stylesheet" href="{% static 'restset_css/profileSet.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block bodyAttr %}class="bg-1" data-spy="scroll" data-target=".navbar"{% endblock %}
+{% block content %}
+{% include "restset/includes/navbar.html" %}
+
+    <!-- 個人檔案設定 -->
+    <div class="row" id="ProfileSetting">
+        {% include "restset/includes/stackNav.html" %}
+
+        <!-- Profile Setting -->
+
+        <div class="col-xs-9">
+            {% include "includes/messages.html" %}
+            <!-- 使用者資訊 -->
+            <form class="form-horizontal" method="post" action=".">
+                {% csrf_token %}
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <strong class="panel-title text-left">員工密碼設定</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="input-group first">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>
+                            <input type="text" value="{{ request.user.username }}" class="form-control" placeholder="使用者名稱" disabled>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="input-group{% if form.new_password1.errors %} has-error{% endif %}">
+                            <span class="input-group-addon" id="basic-addon2">
+                                <i class="glyphicon glyphicon-lock"></i>
+                            </span>
+                            <input type="password" name="new_password1" class="form-control" placeholder="員工密碼" required>
+                        </div>
+                        {% for error in form.new_password1.errors %}
+                        <h6 class="text-danger">* {{ error }}</h6>
+                        {% endfor %}
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="input-group last{% if form.new_password2.errors %} has-error{% endif %}">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-lock"></i>
+                            </span>
+                            <input type="password" name="new_password2" class="form-control" placeholder="員工密碼確認" required>
+                        </div>
+                        {% for error in form.new_password2.errors %}
+                        <h6 class="text-danger">* {{ error }}</h6>
+                        {% endfor %}
+                    </div>
+
+                    <div class="panel-footer text-right">
+                        <button class="btn btn-success" type="submit">更改</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

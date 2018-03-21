@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}OrderDetail{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.css">
+<link rel="Stylesheet" href="{% static 'rest_css/orderDetail.css' %}">
+{% endblock %}
+
+{% block bodyAttr %}id="myPage" data-spy="scroll" data-target=".navbar" data-offset="20"{% endblock %}
+{% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#myPage">明細表</a>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron" id="mybuylist">
+    {% include "includes/messages.html" %}
+    <h3 class="text-center">{{ order.tableNum }}桌 - 消費明細</h3>
+    <br>
+    <table class="table table-striped" id="mytable">
+        <thead>
+            <tr>
+                <th class="text-center" width="40%">名稱</th>
+                <th class="text-center" width="15%">單價</th>
+                <th class="text-center" width="15%">份數</th>
+                <th class="text-center servecount" width="15%">待上</th>
+                <th class="text-center" width="15%">總價</th>
+            </tr>
+        </thead>
+        <tbody id="mytablebody">
+
+        </tbody>
+    </table>
+    <div id="totalPrice">
+    </div>
+</div>
+
+<button class="bell btn btn-lg btn-black" onclick="servicebell();">
+    <span class="glyphicon glyphicon-bell"></span>
+    服務鈴
+</button>
+{% endblock %}
+{% block javascript %}
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.js"></script>
+<script>
+    idFoodsJsonPath = "{{ idFoodsJsonPath }}";
+</script>
+<script src="{% static 'rest_js/orderDetail.js' %}"></script>
+<script src="{% static 'rest_js/common.js' %}"></script>
+{% endblock %}

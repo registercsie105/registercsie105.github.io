@@ -1,0 +1,24 @@
+.panel-body > *
+{
+	width: 80%;
+	margin-left: 10%;
+}
+
+.panel-body > h6
+{
+	margin-bottom: 0px;
+}
+
+.first.input-group
+{
+	margin-top: 10px;
+}
+
+.last.input-group
+{
+	margin-bottom: 10px;
+}
+
+input[type="text"]:disabled {
+    background: #f5f5f5;
+}

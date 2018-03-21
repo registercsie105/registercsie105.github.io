@@ -1,0 +1,61 @@
+body
+{
+	background-color: #333;
+}
+
+.bell
+{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.glyphicon-bell
+{
+    color: yellow;
+}
+
+.btn-black
+{
+    color: yellow;
+    background-color: black;
+}
+
+.btn-black:active , .btn-black:hover ,
+.btn-black:focus , .btn-black:visited
+{
+    color: yellow;
+    background-color: #555555;
+}
+
+.scrolltd
+{
+  max-width:1px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.jumbotron
+{
+    /* 上 右 下 左;*/
+    padding: 75px 25px 50px 25px;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0px;
+}
+
+#totalPrice>hr
+{
+	width: 95%;
+	border-top-color: #000;
+}
+
+.totalfont
+{
+	font-size: 18px;
+}
+
+.servecount
+{
+	color: brown;
+}

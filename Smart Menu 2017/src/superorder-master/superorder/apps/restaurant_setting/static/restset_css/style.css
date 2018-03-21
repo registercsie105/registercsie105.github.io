@@ -1,0 +1,56 @@
+body
+{
+    padding-top: 50px;
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+}
+
+.bg-1
+{
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+
+.row
+{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+
+.nav-tabs li a
+{
+    color: #777;
+}
+
+.navbar
+{
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+.navbar li a, .navbar .navbar-brand
+{
+    color: #d5d5d5 !important;
+}
+
+.navbar-nav li a:hover
+{
+    color: #fff !important;
+}
+
+.navbar-nav li.active a
+{
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+
+.navbar-default .navbar-toggle
+{
+    border-color: transparent;
+}

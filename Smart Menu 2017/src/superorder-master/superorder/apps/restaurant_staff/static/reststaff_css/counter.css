@@ -1,0 +1,14 @@
+.form-setting
+{
+	display: inline-block;
+	width: calc(100% - 150px);
+}
+
+.btn-green
+{
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 100px;
+    color: white;
+    background-color: #5cb85c;
+}

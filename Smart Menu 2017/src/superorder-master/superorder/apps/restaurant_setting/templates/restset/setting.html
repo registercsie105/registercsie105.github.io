@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}SmartMenu - Setting{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'restset_css/style.css' %}">
+
+{% endblock %}
+
+{% block bodyAttr %}class="bg-1" data-spy="scroll" data-target=".navbar"{% endblock %}
+{% block content %}
+{% include "restset/includes/navbar.html" %}
+<div class="container">
+{% include "includes/messages.html" %}
+</div>
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
