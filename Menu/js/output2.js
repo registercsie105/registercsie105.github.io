@@ -215,23 +215,19 @@ function myConfirm(hudingID , tsID , imageID , name , price , src , intro , top1
             if(tsID>=0)
             {
                 TSeditListedit(tsID,fname,fprice,fsrc,fintro,ftop10,fcategory);
-                // console.log(TSeditList);
             }
             else
             {
                 TSnewListadd(imageID,fname,fprice,fsrc,fintro,ftop10,fcategory);
-                // console.log(TSnewList);
             }
 
             if(hudingID>=0)
             {
                 HudingeditListedit(hudingID,fname,fprice,fsrc,fintro,ftop10,fcategory);
-                // console.log(HudingeditList);
             }
             else
             {
                 HudingnewListadd(imageID,fname,fprice,fsrc,fintro,ftop10,fcategory);
-                // console.log(HudingnewList);
             }
 
             ImagesSetting(imageID,fsrc);
@@ -257,23 +253,19 @@ function myConfirm(hudingID , tsID , imageID , name , price , src , intro , top1
             if(tsID>=0)
             {
                 TSeditListedit(tsID,fname,fprice,src,fintro,ftop10,fcategory);
-                // console.log(TSeditList);
             }
             else
             {
                 TSnewListadd(imageID,fname,fprice,src,fintro,ftop10,fcategory);
-                // console.log(TSnewList);
             }
 
             if(hudingID>=0)
             {
                 HudingeditListedit(hudingID,fname,fprice,src,fintro,ftop10,fcategory);
-                // console.log(HudingeditList);
             }
             else
             {
                 HudingnewListadd(imageID,fname,fprice,src,fintro,ftop10,fcategory);
-                // console.log(HudingnewList);
             }
 
             ImagesSetting(imageID,src);
@@ -304,23 +296,19 @@ function myDelete(hudingID,tsID,imageID)
         if(tsID>=0)
         {
             TSeditListdel(tsID);
-            // console.log(TSeditList);
         }
         else
         {
             TSnewListdel(imageID);
-            // console.log(TSnewList);
         }
 
         if(hudingID>=0)
         {
             HudingeditListdel(hudingID);
-            // console.log(HudingeditList);
         }
         else
         {
             HudingnewListdel(imageID);
-            // console.log(HudingnewList);
         }
 
         swal
@@ -363,9 +351,6 @@ function addAlert(num)
 
     }).then(function () 
     {
-        console.log("Helllllllllllllo");
-        alert("Fk u !!!!!!!!!");
-
         var fcategoryID = "category" + num;
         var fcategoryTitleID = "categoryTitle" + num;
         var fcategoryLen = $("#" + fcategoryID)[0].children.length;
@@ -386,8 +371,6 @@ function addAlert(num)
         var fprice = $("#myprice").val();
         var fintro = $("#myintro").val();
         var ftop10 = false;
-
-        console.log("FK",fname,fprice,ftop10);
 
         if($(".star")[1].getAttribute("id")=="fullstar")
         {
