@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>SmartMenu - Homepage</title>
+	<meta charset="utf-8">
+
+	<!-- bootstrap.css -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<!-- jquery 要先放 , bs會用到-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script> new WOW().init(); </script>
+
+    <!-- animate.css  -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!-- import our index.css -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#home">電子菜單</a>
+            </div>
+        
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#partner">合作夥伴</a></li>
+                    <li><a href="#contact">聯繫我們</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br><br>
+
+
+    <!-- Container (The Band Section) -->
+    <div id="home" class="bg-1 text-center">
+        <br><br>
+        <h3>餐廳都必須擁有的SOP</h3>
+        <p><em>除了提供餐廳自製餐單 ...<br>點餐、確認點餐、加點、結帳也一手包辦！</em></p>
+        <br><br>
+    </div>
+
+    <div id="partner">
+        <br>
+        <div class="text-center">
+            <h3>已經有數家餐廳與我們合作</h3>
+            <p><em>我們也誠摯歡迎您的加入！</em></p>
+        </div>
+
+        <br>
+        <div class="row wow fadeInUp">
+            <div class="col-sm-4 col-xs-4 text-center imgframe">
+                <h4>公司1</h4>
+                <img src="images/menu4.jpg" class="customSize">        
+            </div>
+            
+            <div class="col-sm-4 col-xs-4 text-center imgframe">
+                <h4>公司2</h4>
+                <img src="images/menu2.jpg" class="customSize">        
+            </div>
+
+            <div class="col-sm-4 col-xs-4 text-center imgframe">
+                <h4>公司3</h4>
+                <img src="images/menu3.jpg" class="customSize">        
+            </div>
+        </div>
+
+        <br>
+        <div class="row wow fadeInUp">
+            <div class="col-sm-4 col-xs-4 text-center imgframe">
+                <h4>公司4</h4>
+                <img src="images/menu4.jpg" class="customSize">        
+            </div>
+            
+            <div class="col-sm-4 col-xs-4 text-center imgframe">
+                <h4>公司5</h4>
+                <img src="images/menu2.jpg" class="customSize">        
+            </div>
+
+            <div class="col-sm-4 col-xs-4 text-center imgframe">
+                <h4>公司6</h4>
+                <img src="images/menu3.jpg" class="customSize">        
+            </div>
+        </div>
+
+        <br>
+        <div class="row wow fadeInUp">
+            <div class="col-sm-4 col-xs-4 text-center imgframe">
+                <h4>公司7</h4>
+                <img src="images/menu4.jpg" class="customSize">        
+            </div>
+            
+            <div class="col-sm-4 col-xs-4 text-center imgframe">
+                <h4>公司8</h4>
+                <img src="images/menu2.jpg" class="customSize">        
+            </div>
+
+            <div class="col-sm-4 col-xs-4 text-center imgframe">
+                <h4>公司9</h4>
+                <img src="images/menu3.jpg" class="customSize">        
+            </div>
+        </div>
+
+        <br>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="bg-1">
+        <br>
+        <h3 class="text-center">聯繫我們</h3>
+        <p class="text-center"><em>立即加入我們，註冊或登入！</em></p>
+
+        <div class="row">
+        
+            <div class="col-sm-4 col-xs-4"></div>
+            <div class="col-sm-2 col-xs-2 text-center">
+                <button type="button" class="btn btn-warning" onclick="location.href='./register.html'">註冊</button>
+            </div>
+            <div class="col-sm-2 col-xs-2 text-center">
+                <button type="button" class="btn btn-primary" onclick="location.href='./login.html'">登入</button>
+            </div>
+            <div class="col-sm-4 col-xs-4"></div>
+
+            <br>
+        </div>
+          
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <a class="up-arrow" href="#home" data-toggle="tooltip" >
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <br>
+        <p> Made By <a href="#" data-toggle="tooltip">our.website.com</a></p> 
+    </footer>
+
+
+    <script>
+
+        $(document).ready(function()
+        {
+            $('[data-toggle="tooltip"]').tooltip(); 
+      
+            $(".navbar a, footer a[href='#home']").on('click', function(event) 
+            {
+
+                if (this.hash !== "") 
+                {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function(){
+
+                    window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

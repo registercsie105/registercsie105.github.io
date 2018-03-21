@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>SmartMenu - Login</title>
+    <meta charset="utf-8">
+
+    <!-- bootstrap.css -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- jquery 要先放 , bs會用到-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- import our login.css -->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body class="bg-1" data-spy="scroll" data-target=".navbar">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="./index.html#home">電子菜單</a>
+            </div>
+        
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./index.html#home">首頁</a></li>
+                    <li><a href="./index.html#partner">合作夥伴</a></li>
+                    <li><a href="#">聯繫我們</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 class="text-center login-title">登入到餐廳介面 (餐廳老闆)</h1>
+            <div class="account-wall">
+                <img class="profile-img" src="https://imgur.com/eDvtbaX.png"
+                    alt="">
+                <form class="form-signin">
+                <input type="text" class="form-control" placeholder="餐廳老闆名稱" required autofocus>
+                <input type="password" class="form-control" placeholder="餐廳老闆密碼" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    登入</button>
+                </form>
+            </div>
+
+            <a href="./stafflogin.html" class="text-center anotherlogin">員工請按此登入！ </a>
+
+            <a href="./register.html" class="text-center new-account">沒有帳戶嗎？立即創建！ </a>
+
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
