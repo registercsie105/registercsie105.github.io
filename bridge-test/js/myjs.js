@@ -6,7 +6,7 @@ var total = 0;
 
 $("#rightbtn").hide();
 
-$("img").click(function(){
+$(".player").click(function(){
 	if(idlist.indexOf(this.id)==-1 && idlist.length<3)
 	{
 		idlist.push(this.id);
