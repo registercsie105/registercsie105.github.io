@@ -4,6 +4,7 @@ var timelist = [0,1,3,6,8,12];
 var big = 0;
 var total = 0;
 var moveDis = 0;
+var downDis = 130;
 
 $(document).ready(function() 
 {
@@ -25,7 +26,7 @@ $(".player").click(function(){
 	{
 		idlist.push(this.id);
 		$( this ).animate({
-			top: "+=100"
+			top: "+=" + downDis
 		}, 1000, function() {
 			
 		});
@@ -34,7 +35,7 @@ $(".player").click(function(){
 	{
 		idlist.splice(idlist.indexOf(this.id),1);
 		$( this ).animate({
-			top: "-=100"
+			top: "-=" + downDis
 		}, 1000, function() {
 			
 		});
@@ -66,7 +67,7 @@ function move(h,s,add_minus,push_remove)
 			}
 
 			$("#" + idlist[i]).animate({
-				top: "-=100" ,
+				top: "-=" + downDis ,
 				left: add_minus + "=" + moveDis
 			}, 1000, function() {
 				
