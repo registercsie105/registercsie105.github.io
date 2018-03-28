@@ -112,24 +112,24 @@ function mytable()
 
 		'<tbody>' +
 		'<tr>' +
-	        '<td><img src="pics/1.png" width="30px" height="30px"></td>' +
-	        '<td>1</td>' +
+	        '<td><img src="pics/1.png" width="50px" height="50px"></td>' +
+	        '<td><h4>1</h4></td>' +
 		'</tr>' +
 		'<tr>' +
-	        '<td><img src="pics/2.png" width="30px" height="30px"></td>' +
-	        '<td>3</td>' +
+	        '<td><img src="pics/2.png" width="50px" height="50px"></td>' +
+	        '<td><h4>3</h4></td>' +
 		'</tr>' +
 		'<tr>' +
-	        '<td><img src="pics/3.png" width="30px" height="30px"></td>' +
-	        '<td>6</td>' +
+	        '<td><img src="pics/3.png" width="50px" height="50px"></td>' +
+	        '<td><h4>6</h4></td>' +
 		'</tr>' +
 		'<tr>' +
-	        '<td><img src="pics/4.png" width="30px" height="30px"></td>' +
-	        '<td>8</td>' +
+	        '<td><img src="pics/4.png" width="50px" height="50px"></td>' +
+	        '<td><h4>8</h4></td>' +
 		'</tr>' +
 		'<tr>' +
-	        '<td><img src="pics/5.png" width="30px" height="30px"></td>' +
-	        '<td>12</td>' +
+	        '<td><img src="pics/5.png" width="50px" height="50px"></td>' +
+	        '<td><h4>12</h4></td>' +
 		'</tr>' +
     '</tbody>' +
 	'</table>';
