@@ -74,7 +74,7 @@ function move(h,s,add_minus,push_remove)
 			});
 		}
 
-		$("#log").append("<p> 花費了" + big + "秒！</p>");
+		$("#log").append("<h2> 花費了" + big + "秒！</h2>");
 		total += big;
 		idlist = [];
 		big = 0;
@@ -86,7 +86,7 @@ $("#leftbtn").click(function()
 	move("leftbtn","rightbtn","-","push");
 	if(leftlist.length==5)
 	{
-		alert("你總共花費了 "+total+" 秒...");
+		alert("你總共花費了 " + total + " 秒...");
 	}
 	console.log(leftlist);
 });
