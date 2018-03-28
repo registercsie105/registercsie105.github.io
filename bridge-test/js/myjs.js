@@ -3,6 +3,20 @@ var leftlist = [];
 var timelist = [0,1,3,6,8,12];
 var big = 0;
 var total = 0;
+var moveDis = 0;
+
+$(document).ready(function() 
+{
+	moveDis = window.innerWidth / 2 + 40;
+	console.log(moveDis);
+});
+
+$(window).resize(function() 
+{
+	moveDis = window.innerWidth / 2 + 40;
+	console.log(moveDis);
+});
+
 
 $("#rightbtn").hide();
 
@@ -53,7 +67,7 @@ function move(h,s,add_minus,push_remove)
 
 			$("#" + idlist[i]).animate({
 				top: "-=100" ,
-				left: add_minus + "=800"
+				left: add_minus + "=" + moveDis
 			}, 1000, function() {
 				
 			});
