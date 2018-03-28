@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<link rel="shortcut icon" href="pics/bridge.ico">
+	<title> Cross the bridge </title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+</head>
+<body>
+	<table class="table"> 
+		<thead>
+		<tr>
+			<th width="50%">Player</th>
+			<th width="50%">Time(second)</th>
+		</tr>
+		</thead>
+
+		<tbody>
+		<tr>
+	        <td><img src="pics/1.png" width="30px" height="30px"></td>
+	        <td>1</td>
+		</tr>
+		<tr>
+	        <td><img src="pics/2.png" width="30px" height="30px"></td>
+	        <td>3</td>
+		</tr>
+		<tr>
+	        <td><img src="pics/3.png" width="30px" height="30px"></td>
+	        <td>6</td>
+		</tr>
+		<tr>
+	        <td><img src="pics/4.png" width="30px" height="30px"></td>
+	        <td>8</td>
+		</tr>
+		<tr>
+	        <td><img src="pics/5.png" width="30px" height="30px"></td>
+	        <td>12</td>
+		</tr>
+    </tbody>
+	</table>
+
+	<p class="text-success text-center">[說明]點擊圖片，圖片會下移，一次只可以一或兩個人！選擇完畢後就點擊按鈕過橋吧～</p>
+	<p class="text-danger text-center">[注意]每次過橋都一定要攜帶<img src="pics/light.png" width="40px" height="40px"></p>
+
+	<div class="row">
+		<div class="col-xs-5 text-center">
+		</div>
+		<div class="col-xs-2 text-center">
+			<button class="btn btn-lg btn-success" id="leftbtn">
+				< ------
+			</button>
+			<button class="btn btn-lg btn-warning" id="rightbtn">
+				------ >
+			</button>
+		</div>
+		<div class="col-xs-5 text-center">
+			<img src="pics/1.png" width="40px" height="40px" id="pic1" class="player">
+			<img src="pics/2.png" width="40px" height="40px" id="pic2" class="player">
+			<img src="pics/3.png" width="40px" height="40px" id="pic3" class="player">
+			<img src="pics/4.png" width="40px" height="40px" id="pic4" class="player">
+			<img src="pics/5.png" width="40px" height="40px" id="pic5" class="player">
+			<img src="pics/light.png" width="40px" height="40px" id="light" class="player">
+		</div>
+	</div>
+	<br>
+	<div class="row text-center" id="log">
+	</div>
+</body>
+
+<script type="text/javascript" src="js/myjs.js"></script>
+
+</html>
