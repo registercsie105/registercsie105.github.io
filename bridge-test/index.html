@@ -4,46 +4,32 @@
  	<link rel="shortcut icon" href="pics/bridge.ico">
 	<title> Cross the bridge </title>
 	<meta charset="utf-8">
+    
+    <!-- bootstrap.css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- sweet alert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.css">
+    
 
     <link rel="stylesheet" type="text/css" href="css/mycss.css">
 </head>
 <body>
-	<table class="table"> 
-		<thead>
-		<tr>
-			<th width="50%">Player</th>
-			<th width="50%">Time(second)</th>
-		</tr>
-		</thead>
+	
+	<br>
 
-		<tbody>
-		<tr>
-	        <td><img src="pics/1.png" width="30px" height="30px"></td>
-	        <td>1</td>
-		</tr>
-		<tr>
-	        <td><img src="pics/2.png" width="30px" height="30px"></td>
-	        <td>3</td>
-		</tr>
-		<tr>
-	        <td><img src="pics/3.png" width="30px" height="30px"></td>
-	        <td>6</td>
-		</tr>
-		<tr>
-	        <td><img src="pics/4.png" width="30px" height="30px"></td>
-	        <td>8</td>
-		</tr>
-		<tr>
-	        <td><img src="pics/5.png" width="30px" height="30px"></td>
-	        <td>12</td>
-		</tr>
-    </tbody>
-	</table>
+	<div class="row text-center">
+		<button class="btn btn-info btn-lg text-center" onclick="readme()">角色說明</button>
+	</div>
 
-	<p class="text-success text-center">[說明]點擊圖片，圖片會下移，一次只可以一或兩個人！選擇完畢後就點擊按鈕過橋吧～</p>
-	<p class="text-danger text-center">[注意]每次過橋都一定要攜帶<img src="pics/light.png" width="40px" height="40px"></p>
+	<br>
+
+	<h5 class="text-success text-center">[說明]點擊圖片，圖片會下移，一次只可以一或兩個人！選擇完畢後就點擊按鈕過橋吧～</h5>
+	
+	<h5 class="text-danger text-center">[注意]每次過橋都一定要攜帶<img src="pics/light.png" width="40px" height="40px"></h5>
 
 	<div class="row">
 		<div class="col-xs-5 text-center">

@@ -96,3 +96,55 @@ $("#rightbtn").click(function()
 	move("rightbtn","leftbtn","+","remove");
 	console.log(leftlist);
 });
+
+
+function mytable()
+{
+	var myhtml = 
+	'<table class="table"> ' +
+		'<thead>' +
+		'<tr>' +
+			'<th width="50%" class="text-center">Player</th>' +
+			'<th width="50%" class="text-center">Time(second)</th>' +
+		'</tr>' +
+		'</thead>' +
+
+		'<tbody>' +
+		'<tr>' +
+	        '<td><img src="pics/1.png" width="30px" height="30px"></td>' +
+	        '<td>1</td>' +
+		'</tr>' +
+		'<tr>' +
+	        '<td><img src="pics/2.png" width="30px" height="30px"></td>' +
+	        '<td>3</td>' +
+		'</tr>' +
+		'<tr>' +
+	        '<td><img src="pics/3.png" width="30px" height="30px"></td>' +
+	        '<td>6</td>' +
+		'</tr>' +
+		'<tr>' +
+	        '<td><img src="pics/4.png" width="30px" height="30px"></td>' +
+	        '<td>8</td>' +
+		'</tr>' +
+		'<tr>' +
+	        '<td><img src="pics/5.png" width="30px" height="30px"></td>' +
+	        '<td>12</td>' +
+		'</tr>' +
+    '</tbody>' +
+	'</table>';
+
+	return myhtml;
+}
+
+function readme()
+{
+	swal(
+	{
+	    title: '角色說明',
+	    html:  mytable()
+
+	}).then(function () 
+	{
+	    
+	});
+}
