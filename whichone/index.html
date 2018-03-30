@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Which one? </title>
+	<meta charset="utf-8">
+    
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- sweet alert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.css">
+    
+
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+</head>
+<body>
+	<div class="row text-center"> 
+		<button class="btn btn-info btn-lg" id="A"> Company A </button>
+		<button class="btn btn-success btn-lg" id="B"> Company B </button>
+		<br><br><br>
+
+		<div id="CompanyA">
+			<h4 class="text-center">CompanyA</h4>
+			<button class="accordion">公司性質</button>
+			<div class="panel">
+				<p>接案公司，比較少自己的產品。</p>
+			</div>
+
+			<button class="accordion">工作壓力</button>
+			<div class="panel">
+				<p>中等或是偏小</p>
+			</div>
+
+			<button class="accordion">工作內容</button>
+			<div class="panel">
+				<p>網頁的切版、套版、特效，有時候要做網頁小遊戲，所以也會用到動畫，但主管說那是比較進階之後的事。</p>
+			</div>
+
+			<button class="accordion">工作薪資</button>
+			<div class="panel">
+				<p>37000/月，試用期結束後+3~5%，隨時表現好都調薪，年終至少兩個月。</p>
+			</div>
+
+			<button class="accordion">工作夥伴</button>
+			<div class="panel">
+				<p>只有10幾個人，如果遇到難題，老闆跟同事可協助。</p>
+			</div>
+
+			<button class="accordion">相關連結</button>
+			<div class="panel">
+				<a href="https://github.com/f2etw/jobs/issues/316" target="_blank">徵才資訊</a>
+			</div>
+		</div>
+
+
+		<div id="CompanyB">
+			<h4 class="text-center">CompanyB</h4>
+			<button class="accordion">公司性質</button>
+			<div class="panel">
+				<p>有自己的產品，主要也是為客戶量身打造自己的<a href="http://www.sinlead.com/" target="_blank">購物網站</a></p>
+			</div>
+
+			<button class="accordion text-center">工作壓力</button>
+			<div class="panel">
+				<p>偏大</p>
+			</div>
+
+			<button class="accordion">工作內容</button>
+			<div class="panel">
+				<p>網頁的切版、套版、特效，主管希望可以往後端慢慢前進，可能先從修bug開始，然後越來越深入，最後變全端工程師。</p>
+			</div>
+
+			<button class="accordion">工作薪資</button>
+			<div class="panel">
+				<p>尚未告知</p>
+			</div>
+
+			<button class="accordion">工作夥伴</button>
+			<div class="panel">
+				<p>有30幾個人，如果遇到難題，主管跟同事可協助。</p>
+			</div>
+
+			<button class="accordion">相關連結</button>
+			<div class="panel">
+				<a href="https://medium.com/dezchuang/%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E8%BD%89%E8%81%B7-%E5%8F%B0%E5%8C%97-14-%E9%96%93%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-41e99def87e9" target="_blank">面試心得（請ctrl+F搜尋順立智慧）</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="js/myjs.js"></script>
+
+</html>
