@@ -63,6 +63,25 @@ for (var i = 0; i < animals.length; i++) {
 }
 ```
 
+```js
+function foo(something) {
+  console.log( this.a, something );
+  return this.a + something;
+}
+
+var obj = {
+  a: 2
+};
+
+var bar = foo.bind( obj ); // bar is a function !
+
+var b = bar( 3 ); // 2 3
+console.log( b ); // 5
+
+// foo.bind( obj )(3) = 5
+```
+
+
 * apply()
 ```javascript
 var nums = [1,3,5,7,9,2];
