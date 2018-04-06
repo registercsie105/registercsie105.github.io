@@ -2,59 +2,47 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function formatDate(date)
-{
-  return date.toLocaleDateString();
-}
+var a = "567";
 
-function Mywife(props)
-{
-	return (
-    <img
-		className="Mywife"
-		src={props.user.caturl}
-		alt={props.user.name}
-    />
-	);
-}
+class Clock extends React.Component {
+	constructor(props) 
+	{
+		super(props);
+		this.state = {date: new Date()};
+	}
 
-function UserInfo(props) 
-{
-  return (
-    <div className="UserInfo">
-      <Mywife user={props.userrr} />
-      <div className="UserInfo-name">{props.userrr.name}</div>
-    </div>
-  );
-}
+ componentDidMount() 
+ {
+ 	var t = this.tick;
+    this.timerID = setInterval(
+      t,
+      1000
+    );
+ }
 
-function Comment(props) {
-  return (
-    <div className="Comment">
-      <UserInfo userrr={props.author} />
-      <div className="Comment-text">{props.text}</div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+  	console.log(this);
+    // this.setState({
+    //   date: new Date()
+    // });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
       </div>
-    </div>
-  );
+    );
+  }
 }
-
-
-const comment = {
-  date: new Date(),
-  text: 'I hope you enjoy learning React!',
-  author: {
-    name: 'Hello World',
-    caturl: 'https://www.pets4homes.co.uk/images/articles/771/large/cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg	',
-  },
-};
 
 ReactDOM.render(
-  <Comment
-    date={comment.date}
-    text={comment.text}
-    author={comment.author}
-  />,
+  <Clock />,
   document.getElementById('root')
 );
